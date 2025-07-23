@@ -1,0 +1,212 @@
+{
+  "main": {
+    "id": "9506c9bf9367f54a",
+    "type": "split",
+    "children": [
+      {
+        "id": "5cc26d601cfa2699",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de187e867ff9d31b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Assignments/1. take_action() 호출 과정 분석.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. take_action() 호출 과정 분석"
+            }
+          },
+          {
+            "id": "c468b3b3faf9eca5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "개념/Keystone.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Keystone"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a2e4870363788cb",
+    "type": "split",
+    "children": [
+      {
+        "id": "18b3d7415c088e4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c47d78473fd851ac",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "91cb0d75a377aceb",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3ea9c3363298e2cc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "d0dc0d1755fbed3b",
+    "type": "split",
+    "children": [
+      {
+        "id": "f09333a53e63321c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da137e78fcc5395c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Architecture/Message Broker.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Message Broker 의 백링크"
+            }
+          },
+          {
+            "id": "35f6b4fbc2a86f04",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Projects/python-openstackclient.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from python-openstackclient"
+            }
+          },
+          {
+            "id": "d2b199f20a04a4dd",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c0ef37be8f3bdb57",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Projects/python-openstackclient.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of python-openstackclient"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "de187e867ff9d31b",
+  "lastOpenFiles": [
+    "개념/Keystone.md",
+    "개념/Hypervisor.md",
+    "Components.md",
+    "Services/Designate.md",
+    "Services/Barbican.md",
+    "Projects/python-openstackclient.md",
+    "Projects/Openstack SDK.md",
+    "Assignments/1. take_action() 호출 과정 분석.md",
+    "OpenStack Contribution.md",
+    "Assignments",
+    "Attached files/Pasted image 20250723151158.png",
+    "SDK.md",
+    "개념",
+    "Architecture/Message Broker.md",
+    "Attached files/Pasted image 20250719221748.png",
+    "Attached files/Pasted image 20250720003154.png",
+    "Services",
+    "Projects",
+    "Architecture/Message Queue.md",
+    "img/Pasted image 20250719222220.png",
+    "Attached files",
+    "Architecture",
+    "create a link.md",
+    "Welcome.md"
+  ]
+}

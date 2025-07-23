@@ -1,0 +1,31 @@
+/* 카드 스타일을 위한 설정 */
+.cards .book-card {
+  display: inline-block;
+  width: 180px;
+  margin: 10px;
+  padding: 10px;
+  vertical-align: top;
+  border-radius: 8px;
+  background-color: var(--background-secondary);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cards .book-card img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.cards .book-title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.cards .book-author,
+.cards .book-date,
+.cards .book-category,
+.cards .book-rating {
+  font-size: 0.9em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}

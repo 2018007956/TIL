@@ -1,0 +1,9 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "theme": "moonstone",
+  "accentColor": "#6776c1",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "extended-colorschemes"
+  ]
+}
