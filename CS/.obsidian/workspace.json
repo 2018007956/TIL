@@ -11,10 +11,14 @@
             "id": "b5a4ca549de7136c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Problems/신규 자동이체 시스템을 설계해보자.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "신규 자동이체 시스템을 설계해보자"
             }
           }
         ]
@@ -155,6 +159,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:새 베이스 생성하기": false,
       "switcher:빠른 전환기 열기": false,
       "graph:그래프 뷰 열기": false,
       "canvas:새 캔버스 만들기": false,
@@ -163,34 +168,37 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b5a4ca549de7136c",
+  "active": "743a5b36a05e1554",
   "lastOpenFiles": [
-    "Network/Web.md",
-    "Operating System/Deadlock.md",
-    "Operating System/Endian.md",
-    "Operating System/Critical Section.md",
-    "Operating System/Context Switching.md",
-    "Operating System/흐름 제어 방식.md",
-    "Network/WebSocket.md",
-    "Network/UDP.md",
-    "Network/TCP.md",
-    "Network/TCP IP 4 layer.md",
-    "Network/TCP Echo Service.md",
-    "Network/Internet Protocol Suite.md",
-    "Network/OSI 7 layer.md",
+    "새 텍스트 문서.txt",
+    "무제.md",
+    "Problems/신규 자동이체 시스템을 설계해보자.md",
+    "Problems/실시간 리스크 분석 시스템을 설계해보자.md",
+    "Problems/엔지니어링 위크, 안전하게 마무리하기.md",
+    "Problems/자연의 원인을 찾아라.md",
+    "Problems/DB 부하의 원인을 해결해보자.md",
+    "개발이 좋은 이유.md",
+    "Attached files/Pasted image 20250823224758.png",
+    "Problems",
     "Network/SSL TLS.md",
-    "Network/SHA-256.md",
     "Network/Socket.md",
+    "Network/SHA-256.md",
     "Network/Session.md",
     "Network/Port.md",
-    "Network/RTT.md",
     "Network/PDU.md",
-    "Network/네트워크 장비.md",
+    "Network/OSI 7 layer.md",
     "Network/NAT.md",
     "Network/Nagle Algorithm.md",
     "Network/Multiplexing.md",
     "Network/MSS.md",
-    "Network/MTU.md",
+    "Network/LAN.md",
+    "Network/IP.md",
+    "Network/HTTPS.md",
+    "Network/HTTP Method.md",
+    "Network/HTTP.md",
+    "Network/Ethernet Frame.md",
+    "Network/DHCP.md",
+    "Algorithm",
     "Others",
     "Attached files/Pasted image 20250722180848.png",
     "Attached files/Pasted image 20250722180635.png",
@@ -201,7 +209,6 @@
     "Attached files/Pasted image 20250404142358.png",
     "Attached file/Pasted image 20250409173349.png",
     "Attached files/Pasted image 20241023000509.png",
-    "Attached files/Pasted image 20241022235138.png",
     "Attached files"
   ]
 }

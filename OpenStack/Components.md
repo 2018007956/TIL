@@ -13,3 +13,4 @@
 - Horizon : Horizon 대시보드를 통해 GUI 환경에서 오픈스택의 구성요소들을 컨트롤 가능
 
 Nova, Neutron 등과 같이 중요한 컴포넌트들은 openstackcli에 구현되어 있는데, Designate 등 다른 컴포넌트는 개별 클라이언트를 플러그인 형태로 가져와서 사용함
+
