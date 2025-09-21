@@ -1,4 +1,4 @@
-OpenStack SDK, CLI 테스트의 구조는 대부분 DBB 구조를 따름
+OpenStack SDK, CLI 테스트의 구조는 대부분 BDD 구조를 따름
 
 **BDD란?**
 행위 주도 개발(Behavior Driven Development)의 약자로
