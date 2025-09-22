@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Assignments/5. Barbican CLI.md",
+                "file": "Build/구축 과정.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "5. Barbican CLI"
+              "title": "구축 과정"
             }
           }
         ],
@@ -107,7 +107,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 414.5,
+    "collapsed": true
   },
   "right": {
     "id": "d0dc0d1755fbed3b",
@@ -200,7 +201,22 @@
   },
   "active": "2ebbae32b69604ac",
   "lastOpenFiles": [
+    "Attached files/Pasted image 20250923000649.png",
+    "Build/구축 과정.md",
+    "Attached files/Pasted image 20250923004749.png",
+    "Attached files/Pasted image 20250923002218.png",
+    "Attached files/Pasted image 20250923000557.png",
+    "Attached files/Pasted image 20250922234722.png",
+    "Attached files/Pasted image 20250922234601.png",
+    "Attached files/Pasted image 20250922233451.png",
+    "Attached files/Pasted image 20250922233132.png",
+    "Attached files/Pasted image 20250922232644.png",
+    "Attached files/Pasted image 20250922225017.png",
     "Build/환경 구성.md",
+    "개념/Flat Network.md",
+    "개념/Flavor.md",
+    "개념/LVM(Logical Volume Manager).md",
+    "Assignments/5. Barbican CLI.md",
     "Projects/python-openstackclient.md",
     "Projects/Openstack SDK.md",
     "개념/Test Double.md",
@@ -211,22 +227,8 @@
     "개념/MariaDB.md",
     "개념/Keystone.md",
     "개념/Hypervisor.md",
-    "개념/Flavor.md",
-    "개념/Flat Network.md",
     "개념/BDD.md",
-    "Attached files/Pasted image 20250921194506.png",
-    "Attached files/Pasted image 20250921193514.png",
-    "Assignments/5. Barbican CLI.md",
-    "Build/구축 과정.md",
     "Components.md",
-    "Attached files/Pasted image 20250920143325.png",
-    "Attached files/Pasted image 20250920143257.png",
-    "Attached files/Pasted image 20250919215005.png",
-    "Attached files/Pasted image 20250919211024.png",
-    "Attached files/Pasted image 20250919204612.png",
-    "Attached files/Pasted image 20250919201750.png",
-    "Attached files/Pasted image 20250918013925.png",
-    "Attached files/Pasted image 20250918174300.png",
     "Build",
     "Assignments/4. functional test (2).md",
     "Assignments/4. functional test (1).md",
@@ -235,7 +237,6 @@
     "Assignments/3. test code.md",
     "Assignments/2. take_action() 호출 과정 분석.md",
     "Test Code.md",
-    "OpenStack Contribution.md",
     "Assignments",
     "개념",
     "Services",
