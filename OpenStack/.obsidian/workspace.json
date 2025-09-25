@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Build/구축 과정.md",
+                "file": "Build/Troubleshooting/ssh connection failed.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "구축 과정"
+              "title": "ssh connection failed"
             }
           }
         ]
@@ -92,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 333.5,
-    "collapsed": true
+    "width": 251.5
   },
   "right": {
     "id": "d0dc0d1755fbed3b",
@@ -186,24 +185,27 @@
   },
   "active": "2ebbae32b69604ac",
   "lastOpenFiles": [
-    "Attached files/Pasted image 20250923232402.png",
     "Build/구축 과정.md",
-    "개념/Hypervisor.md",
+    "Build/Troubleshooting/tenant 망까지 통신 불가.md",
+    "Build/Troubleshooting/ssh connection failed.md",
+    "Attached files/Pasted image 20250925184155.png",
+    "Attached files/Pasted image 20250925184133.png",
     "Build/환경 구성.md",
+    "Attached files/Pasted image 20250925182242.png",
+    "Attached files/Pasted image 20250925181854.png",
+    "Attached files/Pasted image 20250925181757.png",
+    "Attached files/Pasted image 20250925144911.png",
+    "Attached files/Pasted image 20250925143044.png",
+    "Attached files/Pasted image 20250925141925.png",
+    "Attached files/Pasted image 20250925141437.png",
+    "Build/Troubleshooting",
+    "Attached files/Pasted image 20250923232402.png",
+    "개념/Hypervisor.md",
     "Build/트래픽 흐름.md",
     "개념/Open vSwitch (OVS).md",
-    "Attached files/Pasted image 20250923231035.png",
-    "Attached files/Pasted image 20250923230205.png",
-    "Attached files/Pasted image 20250923225740.png",
     "Build/public-network 재생성 명령어.md",
-    "Attached files/Pasted image 20250923160610.png",
-    "Attached files/Pasted image 20250923220143.png",
-    "Attached files/Pasted image 20250923215232.png",
-    "Attached files/Pasted image 20250923160742.png",
     "Projects/python-openstackclient.md",
     "Projects/Openstack SDK.md",
-    "Attached files/Pasted image 20250923000649.png",
-    "Attached files/Pasted image 20250923004749.png",
     "개념/Flat Network.md",
     "개념/Flavor.md",
     "개념/LVM(Logical Volume Manager).md",
@@ -220,8 +222,6 @@
     "Assignments/4. functional test (2).md",
     "Assignments/4. functional test (1).md",
     "Services/Barbican.md",
-    "Services/Designate.md",
-    "Assignments/3. test code.md",
     "Assignments",
     "개념",
     "Services",
