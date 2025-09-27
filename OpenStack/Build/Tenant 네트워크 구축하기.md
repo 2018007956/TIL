@@ -10,7 +10,7 @@
 	`/etc/neutron/plugins/ml2/ml2_conf.ini`
 	![[Pasted image 20250922234601.png]]
 2. 네트워크 대역대(subnet) 등록
-	- 그래야 FIP 배포 가능능
+	- 그래야 FIP 배포 가능
 	![[Pasted image 20250922200029.png|400]]
 3. Security Group 생성
 4. Flavor(네트워크 리소스의 용량과 구성을 정의하는 매개변수 집합) 생성
