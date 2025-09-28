@@ -11,14 +11,12 @@
             "id": "2ebbae32b69604ac",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
-                "mode": "source",
-                "source": false
+                "file": "Attached files/Pasted image 20250928034714.png"
               },
-              "icon": "lucide-file",
-              "title": "(해결중) Failed to create openstack instance"
+              "icon": "lucide-image",
+              "title": "Pasted image 20250928034714"
             }
           }
         ]
@@ -92,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5
+    "width": 251.5,
+    "collapsed": true
   },
   "right": {
     "id": "d0dc0d1755fbed3b",
@@ -185,25 +184,26 @@
   },
   "active": "2ebbae32b69604ac",
   "lastOpenFiles": [
-    "Build/TroubleShooting/(해결중) Tenant 망까지 통신 불가.md",
-    "Build/TroubleShooting/instance booting failed.md",
+    "Attached files/Pasted image 20250928035219.png",
+    "Attached files/Pasted image 20250928103219.png",
+    "Attached files/Pasted image 20250929001510.png",
+    "Attached files/Pasted image 20250929001927.png",
+    "Attached files/Pasted image 20250929003325.png",
+    "Attached files/Pasted image 20250929002309.png",
     "Build/TroubleShooting/(해결중) OOM killer로 인한 neutron-server shutdown 문제.md",
-    "Attached files/Pasted image 20250928025754.png",
-    "Attached files/Pasted image 20250928025543.png",
-    "Attached files/Pasted image 20250928025432.png",
-    "Attached files/Pasted image 20250928025539.png",
-    "Attached files/Pasted image 20250928025541.png",
-    "Attached files/Pasted image 20250928025059.png",
-    "Attached files/Pasted image 20250928025007.png",
+    "Attached files/Pasted image 20250929002300.png",
+    "Attached files/Pasted image 20250929001505.png",
+    "Attached files/Pasted image 20250929001506.png",
+    "Build/1. 환경 구성.md",
+    "Build/2. 구축 과정.md",
+    "Build/TroubleShooting/instance booting failed.md",
+    "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
+    "Build/TroubleShooting/(해결중) Tenant 망까지 통신 불가.md",
+    "Attached files/Pasted image 20250928041532.png",
+    "Build/TroubleShooting/ssh connection failed.md",
+    "개념/OOM killer.md",
     "Build/Tenant 네트워크 구축하기.md",
     "Build/public-network 재생성 명령어.md",
-    "Build/TroubleShooting/ssh connection failed.md",
-    "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
-    "Attached files/Pasted image 20250927215758.png",
-    "Attached files/Pasted image 20250927215951.png",
-    "Attached files/Pasted image 20250927220730.png",
-    "Build/2. 구축 과정.md",
-    "Build/1. 환경 구성.md",
     "개념/VTEP.md",
     "Build/3. 트래픽 흐름.md",
     "개념/tenant망.md",
@@ -220,7 +220,6 @@
     "개념/Test Double.md",
     "개념/RabbitMQ.md",
     "개념/Memcached.md",
-    "개념/MariaDB.md",
     "Build",
     "Assignments",
     "개념",
