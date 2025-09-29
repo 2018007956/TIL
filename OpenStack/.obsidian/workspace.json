@@ -11,12 +11,14 @@
             "id": "2ebbae32b69604ac",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Attached files/Pasted image 20250928034714.png"
+                "file": "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20250928034714"
+              "icon": "lucide-file",
+              "title": "(해결중) Failed to create openstack instance"
             }
           }
         ]
@@ -90,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 251.5,
-    "collapsed": true
+    "width": 352.5
   },
   "right": {
     "id": "d0dc0d1755fbed3b",
@@ -184,31 +185,34 @@
   },
   "active": "2ebbae32b69604ac",
   "lastOpenFiles": [
-    "Attached files/Pasted image 20250928035219.png",
-    "Attached files/Pasted image 20250928103219.png",
-    "Attached files/Pasted image 20250929001510.png",
-    "Attached files/Pasted image 20250929001927.png",
-    "Attached files/Pasted image 20250929003325.png",
-    "Attached files/Pasted image 20250929002309.png",
-    "Build/TroubleShooting/(해결중) OOM killer로 인한 neutron-server shutdown 문제.md",
-    "Attached files/Pasted image 20250929002300.png",
-    "Attached files/Pasted image 20250929001505.png",
-    "Attached files/Pasted image 20250929001506.png",
-    "Build/1. 환경 구성.md",
-    "Build/2. 구축 과정.md",
-    "Build/TroubleShooting/instance booting failed.md",
-    "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
     "Build/TroubleShooting/(해결중) Tenant 망까지 통신 불가.md",
-    "Attached files/Pasted image 20250928041532.png",
-    "Build/TroubleShooting/ssh connection failed.md",
+    "Build/TroubleShooting/(해결중) Failed to create openstack instance.md",
+    "Build/TroubleShooting/OOM killer로 인한 neutron-server shutdown 문제 (feat. ML2 동작 원리).md",
+    "개념/ML2 Plugin.md",
+    "Attached files/Pasted image 20250929001927.png",
+    "Build/2. 설치 과정.md",
+    "Attached files/Pasted image 20250929220337.png",
+    "Attached files/Pasted image 20250929001510.png",
+    "Attached files/Pasted image 20250928035219.png",
     "개념/OOM killer.md",
+    "Attached files/Pasted image 20250929003325.png",
+    "Attached files/Pasted image 20250930000446.png",
+    "Attached files/Pasted image 20250930000225.png",
+    "Services/Neutron.md",
+    "Attached files/Pasted image 20250929230059.png",
+    "Build/1. 환경 구성.md",
+    "개념/NAT.md",
+    "Build/3. 트래픽 흐름.md",
     "Build/Tenant 네트워크 구축하기.md",
     "Build/public-network 재생성 명령어.md",
+    "개념/Provider Network.md",
+    "Build/TroubleShooting/instance booting failed.md",
+    "Build/TroubleShooting/ssh connection failed.md",
+    "Attached files/Pasted image 20250928034714.png",
+    "Attached files/Pasted image 20250928103219.png",
     "개념/VTEP.md",
-    "Build/3. 트래픽 흐름.md",
     "개념/tenant망.md",
     "Assignments/5. Barbican CLI.md",
-    "개념/Provider Network.md",
     "Build/TroubleShooting",
     "개념/Hypervisor.md",
     "개념/Open vSwitch (OVS).md",
@@ -218,8 +222,6 @@
     "개념/Flavor.md",
     "개념/LVM(Logical Volume Manager).md",
     "개념/Test Double.md",
-    "개념/RabbitMQ.md",
-    "개념/Memcached.md",
     "Build",
     "Assignments",
     "개념",

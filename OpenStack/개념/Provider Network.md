@@ -3,9 +3,10 @@
 - 일반적인 인터넷 서비스 제공자(ISP)가 구축한 네트워크를 사용하여 사용자에게 인터넷 서비스를 제공하는 것과 유사한 개념이다.
 - 데이터 센터의 네트워크를 직접 구축하여 클라우드 서비스를 운영하는 경우, 이 데이터 센터 네트워크가 Provider Netowrk 역할을 한다.
 
-## Self-Service Network
-오픈스택을 사용하는 사용자(Tenant)가 직접 자신만의 vm instance를 위한 네트워크를 구축할 수 있는 네트워크이다. 이 네트워크는 provider network를 기반으로 GRE, VXLAN 등의 터널링을 통해 구축된다.
-
-
-- Provider Network = External Network
-- Self-Service Network = Tunnel Network + External Network
+|구분|설명|
+|---|---|
+|**External Network**|Floating IP를 할당하거나, VM이 외부 인터넷과 통신하기 위해 쓰는 네트워크. 보통 provider network 중 하나를 external=True 로 지정해서 사용.|
+|**Tenant Network (Private Network)**|사용자가 생성하는 내부 가상망. VXLAN/Geneve 같은 오버레이를 통해 구현됨. VM끼리만 통신 가능, 외부와는 직접 연결 안 됨.|
+|**Provider Network**|Neutron이 관리하지만, 실제 물리망과 직결됨. external network일 수도 있고, 내부 VLAN망일 수도 있음.|
+- external=True 만들면 외부 인터넷/FIP 용도로 쓰는 **External Network**가 되고,
+- external=False로 만들면 그냥 **물리 VLAN 기반 내부망**이 됨 (예: 회사 내부 망과 바로 연결된 VM망)
