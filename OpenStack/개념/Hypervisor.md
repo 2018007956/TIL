@@ -11,7 +11,15 @@
 
 다양한 운영 체제가 나란히 실행되고 가상화된 동일한 하드웨어 리소스를 하이퍼바이저와 공유할 수 있다. 이것이 가상화의 주요 장점. 가상화가 없으면 하드웨어에서 하나의 운영 체제만 실행할 수 있다. 
 
-
-
-
 https://www.redhat.com/ko/topics/virtualization/what-is-a-hypervisor
+
+
+### Hypervisor Type 1 (native, bare-metal)
+하이퍼바이저가 해당 하드웨어에서 직접 실행되며 게스트 운영 체제는 하드웨어 위에서 2번째 수준으로 실행된다.
+
+종류: KVM, Xen, Hyper-V
+
+### Hypervisor Type 2 (hosted)
+일반 프로그램과 같이 호스트 운영 체제에서 실행. VM 내부에서 동작되는 게스트 운영 체제는 하드웨어에서 3번째 수준으로 실행된다.
+
+종류: virtual box, QEMU, VMware Server

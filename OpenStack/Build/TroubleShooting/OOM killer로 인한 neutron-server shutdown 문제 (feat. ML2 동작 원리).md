@@ -76,12 +76,11 @@ openstack 명령어도 안 먹음
 	→ L2/L3 Agent가 `neutron-server`와 동기화하며 자신이 관리할 브리지나 포트를 세팅 
 	→ 만약 `neutron-server`가 죽어 있거나 통신이 불가하면, Agent는 “내가 설정해야 할 bridge가 없다” 또는 “네트워크 정보가 유효하지 않다”는 식으로 종료할 수 있음
 
-**가능한 원인**
-1. OVS/OVN 브리지 설정이 잘못되었을 경우
-2. neutron-server 자체가 동작하지 않는 상태인 경우 에이전트가 필요한 정보를 못 받아서 에러 발생
+또한, `ss -lntp | grep 9696`을 해보면 neutron-server(9696)가 리슨이 안되고 있음
 
-`ss -lntp | grep 9696`을 해보면 neutron-server(9696)가 리슨이 안되는 상황이므로,
-2번이 원인일 것으로 추측.
+**원인**
+메모리 누수로 neutron-server가 계속 죽어서 동작하지 못하고 있고, 
+agent가 필요한 정보를 못 받아서 에러 발생하는 상황
 
 **해결 과정 2) ML2 플러그인 설정 파일 수정**
 `/etc/neutron/plugins/ml2/ml2_conf.ini`에서, 아래 정보 수정 후 neutron-server 재시작
