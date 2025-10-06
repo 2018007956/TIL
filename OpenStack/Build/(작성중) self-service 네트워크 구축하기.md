@@ -40,22 +40,13 @@
   ```
 
 > 192.168.50.189까지 ping이 안되는 상황
-- 컨트롤러/네트워크 노드에서 아래 값 설정 확인
+5. OVN 브리지 매핑 : 컨트롤러/네트워크 노드
   ![[Pasted image 20251005010329.png|250]]
 	이 과정에서 [[neutron service down (ovn central not listned)]] 문제 발생하여 해결함
 	-> 라우터 게이트웨이 상태가 Active로 바뀜
 	하지만 여전히 189와는 통신이 안됨
 
-5. Security Group 생성
-6. Flavor(네트워크 리소스의 용량과 구성을 정의하는 매개변수 집합) 생성
-7. OVS 브리지 매핑 : `/etc/neutron/plugins/ml2/openvswitch_agent.ini`
-	```
-	[ovs]
-	bridge_mappings = phynet2:br-ex
-	```
-8. Neutron agent 재시작
-	 `systemctl restart neutron-server.service`
-9. Floating IP 생성 및 연결
+6. Floating IP 생성 및 연결
 	```
 	openstack floating ip create public-network
 	openstack server add floating ip <INSTANCE_NAME> <FLOATING_IP>

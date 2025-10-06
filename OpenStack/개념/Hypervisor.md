@@ -23,3 +23,7 @@ https://www.redhat.com/ko/topics/virtualization/what-is-a-hypervisor
 일반 프로그램과 같이 호스트 운영 체제에서 실행. VM 내부에서 동작되는 게스트 운영 체제는 하드웨어에서 3번째 수준으로 실행된다.
 
 종류: virtual box, QEMU, VMware Server
+
+---
+nova-compute.service 가 꺼지니
+openstack reboot, start, stop 등 인스턴스 관련된 명령어가 다 안 먹음
