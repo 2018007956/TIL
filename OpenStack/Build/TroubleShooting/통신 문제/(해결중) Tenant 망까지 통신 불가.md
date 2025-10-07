@@ -1,6 +1,7 @@
 **문제 상황**
 192.168.50.130(라우터의 외부(qg) 게이트웨이)까지는 ping이 되고, 
 10.1.201.0/24(테넌트망)으로는 접근이 안 됨
+ping floating ip시 실패
 ![[Pasted image 20251007170120.png|400]]
 
 **문제 원인**
@@ -37,15 +38,3 @@ os-network의 br-int가 DOWN 상태라서
 - br-int(게이트웨이) : **내부 IP로 필터하면 안 잡힘** (캡슐화되어 나감)
 즉, 캡처 지점이 달라서 조용한 것
 ----------------------(위 내용은 공부 필요)-----------------------------
-
-- **Gateway Logical Router Port의 MAC mismatch**
-게이트웨이 섀시에 연결된 LRP(`lrp-462891fd-27cb-4d80-ad6e-edf2856cf741`)의 MAC이  
-실제 NAT 포트(br-ex)와 달라지면 패킷이 드롭된다.
-![[Pasted image 20251007184940.png]]
-![[Pasted image 20251007184744.png|500]]
-MAC 주소가 다르면 OVN이 outgoing NAT 패킷을 처리하지 못해서
-수동으로 맞춰줌
-`ovn-nbctl set Logical_Router_Port lrp-47031ea1-5f56-44e0-b9ef-3314406e70c1 mac=\"bc:24:11:8a:a2:b5\"`
-![[Pasted image 20251007184915.png]]
-==`192.168.50.130`는 **게이트웨이 섀시(os-network)의 br-ex**로 외부망에 붙는 인터페이스라 **br-ex의 실제 MAC**과 동일해야 ARP/NAT가 정상 동작==
-(`10.1.201.1`은 **내부 selfservice 네트워크에 있는 논리 라우터 포트**라서 **OVN이 생성한 가상 MAC**(지금 보이는 `fa:16:3e:ea:1e:11`)을 유지해야 함. 이걸 임의로 바꾸면 내부 VM들이 ARP로 배운 라우터 MAC과 달라져 내부 통신이 꼬일 수 있음)

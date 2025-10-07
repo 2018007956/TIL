@@ -11,4 +11,4 @@ Exceeded maximum number of retries. Exhausted all hosts available for retrying b
 - `vlan` 네트워크라면 같은 브리지에 여러 physnet을 매핑해서 VLAN ID로 분리하는 게 가능
 
 **해결 방법**
-self-service network 재구축중
+geneve 타입으로 selfservice 네트워크 생성함
