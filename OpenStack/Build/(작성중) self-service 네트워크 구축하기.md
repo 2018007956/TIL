@@ -44,10 +44,18 @@
   ![[Pasted image 20251005010329.png|250]]
 	이 과정에서 [[neutron service down (ovn central not listned)]] 문제 발생하여 해결함
 	-> 라우터 게이트웨이 상태가 Active로 바뀜
-	하지만 여전히 189와는 통신이 안됨
+	하지만 여전히 게이트웨이와 통신이 안됨
+	-> OpenFlow 버전 불일치 문제였고, geneve 터널망 열어주니 게이트웨이까지 통신됨 
+		참고 : [[라우터 게이트웨이까지 통신 불가 (feat. geneve)]]
 
 6. Floating IP 생성 및 연결
 	```
 	openstack floating ip create public-network
 	openstack server add floating ip <INSTANCE_NAME> <FLOATING_IP>
 	```
+
+
+- 외부 → FIP(192.168.50.177)
+- 외부 → 192.168.50.185(test02, provider 네트워크)
+안 되는 문제 해결중
+
