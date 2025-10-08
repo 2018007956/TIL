@@ -1,3 +1,5 @@
+Open Vertual Network
+
 Open vSwitch (OVS)의 가상 네트워크 관리 기능을 확장한 솔루션으로, 복잡한 멀티-테넌트 환경에서 보다 세밀한 네트워크 정책을 제공한다. OVN은 OVS의 기본적인 L2, L3 스위칭 기능에 로드 밸런싱, ACL, NAT 등의 고급 기능을 제공하여, 가상 네트워크의 관리와 구성을 효율적으로 수행할 수 있도록 돕는다.
 
 **Northbound**
@@ -16,8 +18,8 @@ CMS의 구성 요소로, OVN의 인터페이스 역할을 한다. OpenStack에�
 ### OVN Northbound Database
 OVN/CMS Plugin에서 전달 받은 중간 표현 방식의 Logical Network 구성을 저장한다. 이 데이터베이스의 스키마는 CMS에서 사용하는 Logical Switch, Router, ACL 등의 개념을 OVN이 바로 해석할 수 있도록 설계되어 있다.
 ### ovn-northd
-OVN NB DB와 OVN SB DB를 연결한다. NB DB에서 가져온 Logical Network 구성을 기존 Network 개념으로 변환하여 SB DB에 Logical Datapath Flows로 저장한다.
-
+OVN의 중앙 컴파일러로, OVN NB DB와 OVN SB DB를 연결한다. NB DB에서 가져온 Logical Network 구성을 기존 Network 개념으로 변환하여 SB DB에 Logical Datapath Flows로 저장한다.
+NB 구성을 SB 논리 플로우로 변환해 ovn-controller가 각 노드 OVS에 설치하게 만든다.
 ## SouthBound 구성 요소
 ### OVN Southbound Database
 시스템의 중심 역할을 하는 데이터베이스로 ovn-northd와 각 ovn-controller가 클라이언트로 연결된다. 

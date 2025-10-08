@@ -22,3 +22,36 @@ ovn-nbctl lsp-del 341caa55-0185-42c4-8d42-d544c2ebf9b4
 ovn-nbctl lsp-del 9a7995e6-bead-4425-b340-f69baeccafca
 ```
 ![[Pasted image 20251008010507.png|400]]
+
+---
+- 라우터 포트 이름(LRP) 확인 `ovn-nbctl find logical_router_port`
+![[Pasted image 20251008235837.png]]
+hosting-chassis가 어떤 노드로 지정되어 있는지 확인해보면,
+![[Pasted image 20251009000017.png]]
+NAT가 os-compute 노드에서 동작 중이라는 뜻
+
+자세히는 OVN이 아래와 같은 구조로 동작하는데
+[ selfservice network ] 
+        ↓ (lrp 내부포트)
+  [ private-router datapath ] ← NAT / SNAT / DNAT rule 여기 존재
+        ↓ (lrp 외부포트)
+[ public-network ]
+
+![[Pasted image 20251009002216.png]]
+NAT는 라우터 datapath (name2=private-router) 내부에 생성되고,
+이 라우터가 os-compute (hosting-chassis에서 확인한 값) 노드 위에서 실행됨
+
+---
+test01 VM(10.1.201.156)이 게이트웨이(10.1.201.1)로 ping 할 떄의 경로 :
+[VM eth0]
+   ↓
+[tap인터페이스]
+   ↓
+[br-int (os-compute)]
+   ↓ Geneve 터널
+[br-int (os-network)]
+   ↓
+[LRP(10.1.201.1)]
+   ↓
+(필요 시 NAT → br-ex)
+

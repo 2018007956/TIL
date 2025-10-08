@@ -1,0 +1,1 @@
+외부 물리 네트워크를 연결하는 External Bridge 이다.
