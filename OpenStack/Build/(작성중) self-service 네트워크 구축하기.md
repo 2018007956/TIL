@@ -54,7 +54,7 @@
 	openstack server add floating ip <INSTANCE_NAME> <FLOATING_IP>
 	```
 
-
+---
 - 외부 → FIP(192.168.50.177)
 - 외부 → 192.168.50.185(test02, provider 네트워크)
 안 되는 문제 해결중

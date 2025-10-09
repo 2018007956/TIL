@@ -38,6 +38,3 @@ ovs-vsctl add-port br-ex enp6s18 || true
 **결과**
 외부 네트워크에서 인스턴스로 통신 성공
 ![[Pasted image 20251007205727.png|500]]
-
----
-게이트웨이 섀시, lrp, lsp 등 만지다가 VM까지 통신 끊김
