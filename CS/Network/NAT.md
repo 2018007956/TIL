@@ -6,4 +6,7 @@ Network Address Translation, 네트워크 주소 변환
 IPv4 주소 체계만으로는 많은 주소들을 모두 감당하지 못하는 단점이 있는데, 이를 해결하기 위해 NAT로 공인 IP와 사설 IP로 나눠서 많은 주소를 처리함
 
 인터넷 공유기에는 NAT 기능이 탑재되어 있어서 공유기에 여러 PC를 연결하여 사용할 수 있음
-![[Pasted image 20241023111608.png|600]].
+![[Pasted image 20241023111608.png|600]]
+
+- SNAT(Source NAT) : 출발지 주소를 변경하는 NAT
+- DNAT(Destination NAT) : 도착지 주소를 변경하는 NAT.

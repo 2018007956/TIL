@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Problems/신규 자동이체 시스템을 설계해보자.md",
+                "file": "Network/NAT.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "신규 자동이체 시스템을 설계해보자"
+              "title": "NAT"
             }
           }
         ]
@@ -168,11 +168,13 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "743a5b36a05e1554",
+  "active": "b5a4ca549de7136c",
   "lastOpenFiles": [
+    "Network/ARP.md",
+    "Network/OSI 7 layer.md",
+    "Problems/신규 자동이체 시스템을 설계해보자.md",
     "새 텍스트 문서.txt",
     "무제.md",
-    "Problems/신규 자동이체 시스템을 설계해보자.md",
     "Problems/실시간 리스크 분석 시스템을 설계해보자.md",
     "Problems/엔지니어링 위크, 안전하게 마무리하기.md",
     "Problems/자연의 원인을 찾아라.md",
@@ -186,7 +188,6 @@
     "Network/Session.md",
     "Network/Port.md",
     "Network/PDU.md",
-    "Network/OSI 7 layer.md",
     "Network/NAT.md",
     "Network/Nagle Algorithm.md",
     "Network/Multiplexing.md",

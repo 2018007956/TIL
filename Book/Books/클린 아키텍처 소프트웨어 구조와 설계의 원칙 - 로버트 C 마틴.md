@@ -4,9 +4,9 @@ author: 로버트 C. 마틴
 category: ""
 publisher: ""
 publish_date: 2019-08-20
-status: 🟦 ongoing
+status: 🟩 completed
 start_read_date: 2025-07-19
-finish_read_date: 
+finish_read_date:
 cover_url: ""
 rate: ⭐️⭐️⭐️⭐️⭐️
 ---

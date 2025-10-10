@@ -28,5 +28,5 @@ OpenStack을 직접 구축하며 내부 동작 원리를 깊이 이해하고,
 ```
 
 ## 📎 Reference
-- OpenStack Official Docs  
+- [OpenStack Official Docs](https://docs.openstack.org/ko_KR/install-guide/index.html#)  
 - [OpenStack 쌩짜 설치 메뉴얼](https://smsolutions.slab.com/public/posts/ogjs-104-%EC%B9%9C%EC%A0%88%ED%95%9C-%EA%B9%80%EC%84%A0%EC%9E%84-5r4edxq3?shr=gm6365tt31kxen7dc4d530u0) (4.5 hostname 부터 수행)
