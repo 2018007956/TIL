@@ -45,7 +45,7 @@
 	- 네트워크의 포트를 확인해보면![[Pasted image 20251009161610.png]]
 	  아무 출력도 안뜸
 	  각 네트워크(논리 스위치)안에 type=localnet 포트가 존재하지 않는다는 뜻
-		- `localnet` 포트가 있으면 - → 그 네트워크는 **provider network (flat/vlan)**
+		- `localnet` 포트가 있으면 → 그 네트워크는 **provider network (flat/vlan)**
 	    - `router`나 `dhcp` 관련 포트만 있으면 → **self-service network**
 	=> `lsp-list`가 비어 있으니 localnet 포트가 사라진 상태이고, 그래서 tcpdump에서 본 것처럼 br-ex까지만 ARP가 보이고 br-int로 못 넘어가는 상황
 
