@@ -6,7 +6,7 @@ OpenStack을 직접 구축하며 내부 동작 원리를 깊이 이해하고,
 오픈소스 컨트리뷰션 아카데미 활동을 통해 OpenStack 레포지토리에 [사용자 CRUD 기능 관련 테스트 코드를 기여](https://review.opendev.org/c/openstack/openstacksdk/+/959336)하며, OpenStack의 내부 구조와 서비스 간 상호작용에 관심을 가지게 되었습니다. 마침 친구가 고사양 서버 환경을 제공해주어, 직접 환경을 구축하며 시스템의 동작 원리를 이해할 수 있는 기회를 얻었습니다.
 
 ## 🏗️ 환경 구성
-Controller, Compute, Network, Storage 총 4개의 노드로 구성하였으며, 각 노드에 필요한 서비스를 수동 설치했습니다. 모든 노드는 <u>CPU 8코어, RAM 8GB, Disk 128GB</u> 사양이며, Storage노드는 Cinder의 LVM(Logical Volume Manager) 백엔드 스토리지 구성을 위해 512GB 디스크를 더 추가했습니다. 또한, OOM 문제를 해결하다가 Controller 노드의 RAM과 디스크를 각각 8G, 128GB 씩 확장했습니다.
+Controller, Compute, Network, Storage 총 4개의 노드로 구성하였으며, 각 노드에 필요한 서비스를 수동 설치했습니다. 모든 노드의 사양은 <u>CPU 8코어, RAM 8GB, Disk 128GB</u>이며, Storage노드는 Cinder의 LVM(Logical Volume Manager) 백엔드 스토리지 구성을 위해 512GB 디스크를 더 추가했습니다. 또한, OOM 문제를 해결하다가 Controller 노드의 RAM과 디스크를 각각 8G, 128GB 씩 확장했습니다.
 
 단순히 매뉴얼을 그대로 재현하는 데 그치지 않고, Public Network만을 사용하는 구조에서 확장하여 Self-Service Network를 구축했습니다.
 
