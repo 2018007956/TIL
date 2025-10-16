@@ -1,5 +1,5 @@
 **문제 상황**
-[[(해결중) public network의 VM 통신 불가 문제 2]]를 해결하는 과정에서 localnet 포트 생성하게 되었는데, 다음 명령어를 입력한 직후 노드에 랙이 걸렸고 조금 뒤 세션이 끊겼다. 그리고 나중에는 다른 노드도 모두 세션이 끊겼고, proxmox에 접속 자체가 안되는 상황이 발생했다.
+[[(해결중) public network의 VM 통신 불가 문제 2]]를 해결하는 과정에서 [[localnet]] 포트 생성하게 되었는데, 다음 명령어를 입력한 직후 노드에 랙이 걸렸고 조금 뒤 세션이 끊겼다. 그리고 나중에는 다른 노드도 모두 세션이 끊겼고, proxmox에 접속 자체가 안되는 상황이 발생했다.
 ```
 LS_NAME="neutron-<provider-network-UUID>"
 PHYSNET="phynet2"
@@ -22,14 +22,37 @@ ovn-nbctl lsp-set-addresses ln-${PHYSNET} "unknown"
 OVS 내부에서 해당 포트가 물리 NIC와 직접 연결되는 '데이터패스 연결점'으로 매핑된다. 
 이때 기존에 운영 중이던 `br-ex`와 연결된 Geneve, VXLAN, 외부망 브릿지 등이 있을 경우, 새로운 `localnet`이 추가되며 내부적으로 다음이 동시에 일어난다:
 
-1. OVS가 br-ex 인터페이스를 재구성
-2. 호스트 네트워크 세션이 끊김 - SSH, Proxmox 콘솔, 관리 인터페이스 포함
+1. OVS가 br-ex 인터페이스를 재구성하며
+   `enp6s18` ↔ `OVN` ↔ `Logical Switch` 구조가 재적용됨
+2. 그 결과,
+   - 커널에서 `enp6s18`이 slave 인터페이스로 전환
+   - `enp6s18`에 걸려 있던 IP/route/ARP 등 관리 트래픽 전부 끊김
+   - 호스트 네트워크 세션이 끊김 - SSH, Proxmox 콘솔, 관리 인터페이스 포함
    (해당 인터페이스가 Proxmox의 vmbr0과 연결되어 있으면 Proxmox 브릿지도 Down)
 3. 결과적으로 Proxmox의 관리 IP가 사라짐
 4. 따라서 Proxmox Web UI, SSH, VM 네트워크 모두 단절
 
 결국 관리 네트워크 인터페이스(예: `enp6s18` → `br-ex`)가 down되면서
 모든 노드가 끊긴 것
+##### enp6s18이 slave가 되었다는 말은,
+커널이 원래 NIC를 이렇게 관리했는데
+```
+Kernel Network Stack
+└── enp6s18 (직접 제어)
+      IP = 192.168.0.10
+```
+OVS가 개입하면서 구조가 이렇게 바뀜
+```
+Kernel Network Stack
+└── br-ex (IP 가짐)
+      └── enp6s18 (OVS가 커널에서 제어하는 하위 포트)
+```
+
+즉, 커널이 enp6s18을 직접 제어하던 권한을 OVS 커널 모듈이 가로채서,
+enp6s18이 slave interface가 되어버린 것.
+
+그 순간 커널의 네트워크 스택 입장에서는 enp6s18에 IP가 없고, 직접 통신할 수도 없으니 
+**통신이 끊긴 것처럼** 보이게 되는 것
 
 ### 다른 노드까지 같이 다운된 이유
 OVN의 `localnet`은 provider network와 물리망을 직접 연결한다.
