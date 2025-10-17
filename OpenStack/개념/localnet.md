@@ -6,7 +6,7 @@ OVN은 기본적으로 논리 스위치(Logical Switch)와 논리 포트(Logical
 ### 구조적으로 보면
 `ovn-nbctl show`는 OVN의 논리적(가상) 네트워크 구조를 시각적으로 요약해주는 명령어인데, 
 이 명령어로 OVN NB DB에 정의된 논리 스위치, 논리 라우터, 그리고 그에 연결된 포트들을 확인해보면,
-(사진첨부)
+![[Pasted image 20251017205642.png]]
 - `type: localnet` → 이 포트가 물리 네트워크로의 연결을 의미
 - `options: {network_name=provider (혹은 public)}` → 이게 Neutron에서 정의한 물리 네트워크 이름 (phynet2:physical_network)과 매칭됨
 
