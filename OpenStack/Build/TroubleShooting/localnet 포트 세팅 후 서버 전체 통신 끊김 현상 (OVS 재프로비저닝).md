@@ -15,7 +15,22 @@ ovn-nbctl lsp-set-addresses ln-${PHYSNET} "unknown"
 1. **LAN 케이블 재연결**
 2. **노드 재부팅**
 
-==OVN이 runtime에서 만들어진 포트(localnet, lsp 등)는 메모리 기반이기 떄문에, 재부팅 후 ovn-northd가 다시 해당 정보를 적용하지 않아 꼬였던 localnet 포트가 초기화되면서 해결됨==
+==재부팅 후 플로우/캐시/링크 순서가 새로 정리되면서 해결됨==
+아래 과정에서 통신이 정상화될 수 있었다고 한다.
+1. **OVS OpenFlow 테이블 재생성**
+    - `br-int`, `br-ex`의 플로우가 깨져 있었던 게, `ovn-controller`가 부팅 시 NB/SB를 읽고 다시 깔면서 정상화
+2. **OVS–OVN 매핑 재적용**
+    - `external_ids: ovn-bridge-mappings` 등 OVS 설정을 `ovn-controller`가 다시 읽어 반영
+3. **링크/포트 up/down 순서 안정화
+    - `br-ex`–`enp6s18`–`patch-…`가 부팅 타이밍에 올바른 순서로 올라오며 L2 경로가 정상화
+4. **ARP/NDP, MAC 학습 테이블, 커널 라우팅 캐시 리셋**
+    - 상단 스위치/호스트의 캐시가 초기화되어, MAC flip/ARP 엇갈림 상태가 해소
+5. **브리지 MAC 재설정 영향 해소**
+    - 브리지 MAC이 고정돼 있지 않으면 포트 증감 시 바뀔 수 있는데, 재부팅으로 일관된 MAC로 잡히며 정상화
+
+그리고 이후에 compute 노드가 ssh 연결이 안되는 문제가 있었는데, 
+`ovn-nbctl lsp-del ln-phynet2`를 해주고 재부팅 해주니 살아남
+
 
 **문제 원인 : OVS 재프로비저닝**
 `localnet` 포트를 추가하면서 OVN이 `br-ex`의 플로우를 다시 구성하는 순간  
@@ -43,6 +58,19 @@ ovn-nbctl lsp-set-addresses ln-${PHYSNET} "unknown"
 
 - OVN Controller가 br-ex를 재프로비저닝하며 커널 네트워크 스택이 그 동안 데이터를 처리하지 못했기 때문에 끊긴 것
 - 즉, 물리 구조 변화는 없지만, 논리적 흐름(OVS Flow Table)이 재적용되며 일시적으로 관리망이 다운됨
+
+
+이후 localnet 제거하고나서야 ssh 정상 동작했던 이유는,
+`ln-phynet2` 포트를 삭제하면서 `br-ex`에 걸려 있던 잘못된 데이터 플레인 연결이 끊겨서, 컴퓨트 노드의 네트워크 루트(route)와 인터페이스 상태가 정상으로 돌아온 것
+
+[동작 흐름]
+`ln-phynet2` 존재 → OVN이 컴퓨트 노드를 provider 네트워크 노드처럼 취급  
+→ `br-ex`와 OVN 사이 트래픽 연결 시작  
+→ 관리망 라우팅이 `br-ex`를 통해 OVN datapath로 빨려들어감  
+→ 관리망 세션(SSH, 컨트롤러 연결 등) 끊김  
+→ `lsp-del ln-phynet2` 후 OVN이 br-ex를 더 이상 잡아먹지 않음  
+→ 컴퓨트는 원래의 관리 네트워크 경로 복구  
+→ SSH 정상 동작
 
 ### 다른 노드까지 같이 다운된 이유
 OVN의 `localnet`은 provider network와 물리망을 직접 연결한다.

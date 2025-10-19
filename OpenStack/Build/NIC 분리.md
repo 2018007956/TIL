@@ -13,11 +13,11 @@ OVN 환경에서 단일 NIC로 작업을 하다가 [[localnet 포트 세팅 후 
           (A) access or (B) trunk
                  |                (관리망은 별도 스위치/VLAN 권장)
            +-----+-----+                 
-           |  서버    |
-           |         |
+           |  서버     |
+           |           |
      (관리 NIC)  (외부/Provider NIC)
         eth0          eth1
-        |             |
+         |             |
   [커널 IP 직접]   [OVS Bridge: br-public]
    mgmt IP/route       ├─ port: eth1   (물리 uplink)
                         ├─ port: patch-ex  (br-int와 패치)
