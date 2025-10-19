@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Build/Troubleshooting/ovn-controller Deactivated repeatedly.md",
+                "file": "Services/Neutron.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ovn-controller Deactivated repeatedly"
+              "title": "Neutron"
             }
           }
         ]
@@ -185,6 +185,15 @@
   },
   "active": "893579e45cbd25a1",
   "lastOpenFiles": [
+    "Services/Cinder.md",
+    "개념/LVM(Logical Volume Manager).md",
+    "Services/Designate.md",
+    "Services/Keystone.md",
+    "Services/Neutron.md",
+    "개념/Tagging.md",
+    "Attached files/Pasted image 20251020001815.png",
+    "Services/Barbican.md",
+    "Build/Troubleshooting/ovn-controller Deactivated repeatedly.md",
     "Build/Troubleshooting/OOM killer로 인한 neutron-server shutdown 문제 (feat. ML2 동작 원리).md",
     "Build/Troubleshooting/neutron service down (ovn central not listned).md",
     "Build/Troubleshooting/localnet 포트 세팅 후 서버 전체 통신 끊김 현상 (OVS 재프로비저닝).md",
@@ -204,15 +213,8 @@
     "Build/(작성중) self-service 네트워크 구축하기.md",
     "Build/Troubleshooting/통신 문제/(해결중) public network의 VM 통신 불가 문제 2.md",
     "개념/localnet.md",
-    "Build/Troubleshooting/통신 문제/(해결중) selfservice network의 VM 통신 불가.md",
-    "Build/Troubleshooting/통신 문제/public network의 VM 통신 불가 문제 (compute노드 br-ex 연결).md",
-    "Build/Troubleshooting/ovn-controller Deactivated repeatedly.md",
-    "Build/Troubleshooting/Page fault Error (feat. swap).md",
     "Attached files/Pasted image 20251017205642.png",
     "Attached files/Pasted image 20251017205520.png",
-    "개념/veth.md",
-    "개념/ToR 스위치.md",
-    "개념/Rack.md",
     "Attached files/Pasted image 20251017121849.png",
     "무제.base",
     "Attached files/Pasted image 20251010141604.png",
@@ -220,7 +222,6 @@
     "Attached files/Pasted image 20251009175945.png",
     "Attached files/Pasted image 20251009175008.png",
     "Attached files/Pasted image 20251009174857.png",
-    "Attached files/Pasted image 20251009174431.png",
     "Build/Troubleshooting/통신 문제",
     "Build/Troubleshooting",
     "Build",
