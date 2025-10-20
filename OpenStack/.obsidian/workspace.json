@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "077f135d68691ef4",
+        "id": "34cbdf7adffb54e0",
         "type": "tabs",
         "children": [
           {
-            "id": "893579e45cbd25a1",
+            "id": "23e2468574317660",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Services/Neutron.md",
+                "file": "개념/Floating IP.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Neutron"
+              "title": "Floating IP"
             }
           }
         ]
@@ -183,15 +183,29 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "893579e45cbd25a1",
+  "active": "23e2468574317660",
   "lastOpenFiles": [
+    "개념/Hypervisor.md",
+    "개념/Floating IP.md",
+    "개념/OVN과 OVS.md",
+    "개념/Open vSwitch (OVS).md",
+    "개념/Overlay Network.md",
+    "Build/1-3. 브리지 구조.md",
+    "Build/0. 원격 서버 접속 과정 (wireguard).md",
+    "Build/1-1. 환경 구성.md",
+    "Build/1-2. 노드별 서비스 구조.md",
+    "Build/2. 설치 과정.md",
+    "Build/3. 트래픽 흐름.md",
+    "개념/KVM.md",
+    "Attached files/Pasted image 20251020061802.png",
+    "Attached files/Pasted image 20251020061257.png",
     "Services/Cinder.md",
+    "Services/Neutron.md",
+    "Services/Keystone.md",
+    "Attached files/Pasted image 20251020001815.png",
     "개념/LVM(Logical Volume Manager).md",
     "Services/Designate.md",
-    "Services/Keystone.md",
-    "Services/Neutron.md",
     "개념/Tagging.md",
-    "Attached files/Pasted image 20251020001815.png",
     "Services/Barbican.md",
     "Build/Troubleshooting/ovn-controller Deactivated repeatedly.md",
     "Build/Troubleshooting/OOM killer로 인한 neutron-server shutdown 문제 (feat. ML2 동작 원리).md",
@@ -200,19 +214,7 @@
     "Build/Troubleshooting/instance booting failed.md",
     "Build/Troubleshooting/Failed to create openstack instance (flat type).md",
     "Build/Troubleshooting/통신 문제/Geneve 터널망 생성 안돼서 라우터 게이트웨이까지 통신 불가 (OpenFlow Version negotiation failed).md",
-    "Build/1-2. 노드별 서비스 구조.md",
     "Attached files/Pasted image 20251019140251.png",
-    "Build/2. 설치 과정.md",
-    "Build/1-1. 환경 구성.md",
-    "Build/Troubleshooting/ssh connection failed.md",
-    "Build/0. 원격 서버 접속 과정 (wireguard).md",
-    "Build/public-network 재생성 명령어.md",
-    "Build/NIC 분리.md",
-    "Build/3. 트래픽 흐름.md",
-    "Build/1-3. 브리지 구조.md",
-    "Build/(작성중) self-service 네트워크 구축하기.md",
-    "Build/Troubleshooting/통신 문제/(해결중) public network의 VM 통신 불가 문제 2.md",
-    "개념/localnet.md",
     "Attached files/Pasted image 20251017205642.png",
     "Attached files/Pasted image 20251017205520.png",
     "Attached files/Pasted image 20251017121849.png",
@@ -220,8 +222,6 @@
     "Attached files/Pasted image 20251010141604.png",
     "Attached files/Pasted image 20251010140614.png",
     "Attached files/Pasted image 20251009175945.png",
-    "Attached files/Pasted image 20251009175008.png",
-    "Attached files/Pasted image 20251009174857.png",
     "Build/Troubleshooting/통신 문제",
     "Build/Troubleshooting",
     "Build",
