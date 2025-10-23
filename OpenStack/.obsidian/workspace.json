@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "개념/Floating IP.md",
+                "file": "개념/Hypervisor.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Floating IP"
+              "title": "Hypervisor"
             }
           }
         ]
@@ -185,8 +185,16 @@
   },
   "active": "23e2468574317660",
   "lastOpenFiles": [
-    "개념/Hypervisor.md",
+    "개념/veth.md",
+    "개념/VTEP.md",
+    "개념/UUID.md",
+    "개념/Tagging.md",
+    "개념/Test Double.md",
+    "개념/ToR 스위치.md",
+    "개념/Underlay Network.md",
+    "개념/OVN.md",
     "개념/Floating IP.md",
+    "개념/Hypervisor.md",
     "개념/OVN과 OVS.md",
     "개념/Open vSwitch (OVS).md",
     "개념/Overlay Network.md",
@@ -205,15 +213,7 @@
     "Attached files/Pasted image 20251020001815.png",
     "개념/LVM(Logical Volume Manager).md",
     "Services/Designate.md",
-    "개념/Tagging.md",
     "Services/Barbican.md",
-    "Build/Troubleshooting/ovn-controller Deactivated repeatedly.md",
-    "Build/Troubleshooting/OOM killer로 인한 neutron-server shutdown 문제 (feat. ML2 동작 원리).md",
-    "Build/Troubleshooting/neutron service down (ovn central not listned).md",
-    "Build/Troubleshooting/localnet 포트 세팅 후 서버 전체 통신 끊김 현상 (OVS 재프로비저닝).md",
-    "Build/Troubleshooting/instance booting failed.md",
-    "Build/Troubleshooting/Failed to create openstack instance (flat type).md",
-    "Build/Troubleshooting/통신 문제/Geneve 터널망 생성 안돼서 라우터 게이트웨이까지 통신 불가 (OpenFlow Version negotiation failed).md",
     "Attached files/Pasted image 20251019140251.png",
     "Attached files/Pasted image 20251017205642.png",
     "Attached files/Pasted image 20251017205520.png",

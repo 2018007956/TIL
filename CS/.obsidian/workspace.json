@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Network/클라우드 컴퓨팅.md",
+                "file": "Network/Subnet Mask.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "클라우드 컴퓨팅"
+              "title": "Subnet Mask"
             }
           }
         ]
@@ -170,8 +170,11 @@
   },
   "active": "b5a4ca549de7136c",
   "lastOpenFiles": [
-    "Network/NAT.md",
+    "Network/Subnet.md",
+    "Network/Subnet Mask.md",
+    "Network/IP.md",
     "Network/클라우드 컴퓨팅.md",
+    "Network/NAT.md",
     "Network/ARP.md",
     "Network/OSI 7 layer.md",
     "Problems/신규 자동이체 시스템을 설계해보자.md",
@@ -194,11 +197,8 @@
     "Network/Multiplexing.md",
     "Network/MSS.md",
     "Network/LAN.md",
-    "Network/IP.md",
     "Network/HTTPS.md",
     "Network/HTTP Method.md",
-    "Network/HTTP.md",
-    "Network/Ethernet Frame.md",
     "Algorithm",
     "Others",
     "Attached files/Pasted image 20250722180848.png",
