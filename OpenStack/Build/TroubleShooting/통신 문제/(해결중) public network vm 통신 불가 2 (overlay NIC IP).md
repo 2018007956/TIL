@@ -53,30 +53,21 @@ VM 마이그레이션하면서 디스크 용량 줄었는데, 그 문제일 것�
     - `compute_nodes` : 4K
     - `locks` : 4K  
         → **VM 디스크 찌꺼기 없음**
-✅ 메모리듯
+✅ 메모리도 충분
+- `free -h`:
+	- total 3.8G
+	- available 2.7G
+	VM 하나(cirros)는 128MB~512MB만 있어도 충분하므로 메모리 부족 가능성도 0%.
+
+VM 빌드 실패의 원인은 "디스크"도 "메모리"도 아니다.  
+실제 실패 지점은 **네트워크(VIF plug)** 또는 **OVN 포트 바인딩 실패**일 확률이 높다
+
+nova-compute 로그를 확인해보면:
+![[Pasted image 20251110233429.png]]
+
+==**원인 : OVN 포트 바인딩 실패 때문에 VM 빌드가 중단됨**==
+Nova-compute는 인스턴스를 만들 때 **반드시 네트워크 포트를 Hypervisor(OVS/OVN)에 ‘VIF plug’** 해야 하는데  
+이 단계에서 실패하면 VM 생성은 즉시 중단됨
 
 
----
-### OVN 설정을 overlay NIC 주소로 해야하는 이유
-OVN 구조는 다음과 같이 동작:
-- 모든 노드는 `ovn-controller` 프로세스를 갖고 있음
-- `ovn-controller` 는 **Geneve 터널 연결을 위해**
-    - `ovn-encap-ip` 값
-    - `ovn-encap-type=geneve`  
-        를 기반으로 서로 터널을 만듦
-즉, **Controller도 Geneve 네트워크의 구성원이 되어야 Logical Topology 전체를 배포할 수 있음**
-
-다시 말해:
-✅ Compute ↔ Compute  
-✅ Compute ↔ Network  
-✅ Network ↔ Controller  
-✅ Controller ↔ Compute  
-모두 geneve tunnel mesh를 형성해야 함.
-
-따라서 Controller의 ovn-encap-ip 값이 물리망(192.168.50.x)으로 되어 있으면,
-- Compute가 Controller와 터널을 못 만듦
-- Controller의 chassis가 SBDB에서 “unnreachable” 또는 incomplete 상태가 됨
-- northd가 logical topology를 컴퓨트에 제대로 푸시하지 못함
-- 결국 포트 바인딩 실패
-이런 식으로 오류 발생
 
