@@ -25,7 +25,7 @@
 	provider 네트워크를 사용하는 인스턴스가 있는 노드에서 phynet2(public)에 대한 bridge mapping이 있어야그 인스턴스가 외부 L2와 직접 통신할 수 있음
 
 **해결 방법**
-	1. [compute] `ovs-vsctl get Open_vSwitch . external-ids:ovn-bridge-mappings="phynet2:br-ex"`
+	1. [compute] `ovs-vsctl set Open_vSwitch . external-ids:ovn-bridge-mappings="phynet2:br-ex"`
 	2. provider network를 컴퓨트 노드에도 확장
 	   compute 노드에도 br-ex를 만들어서 같은 물리 NIC를 붙임  
 ```
