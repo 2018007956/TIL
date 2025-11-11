@@ -6,19 +6,17 @@
 **가상 네트워크 생성**
 [Controller] OpenStack VM이 사용할 네트워크를 Neutron을 통해 생성
 1. Provider network 생성
-   openstack network create \
-	  --provider-network-type geneve \
-	  --provider-segment 2000 \
-	  selfservice
-   ![[Pasted image 20251005000201.png|400]]
+   openstack network create VMNET01
+	  ( 옵션 안넣어도 됨. 기본값으로 뉴트론에서 자동 구성됨)
+	![[Pasted image 20251111232924.png|400]]
 2. 네트워크 대역대(subnet) 등록
-   ![[Pasted image 20251005000805.png|400]]
+   ![[Pasted image 20251111233015.png|400]]
 3. 라우터 생성
    `openstack router create private-router`
-   `openstack router add subnet private-router 10-1-201-0`
+   `openstack router add subnet private-router vmnet01-subnet`
 4. 외부 네트워크 연결
 	`openstack router set private-router --external-gateway public-network`
-	![[Pasted image 20251005001633.png|300]]
+	
 	**라우터 외부 포트가 올라가는 게이트웨이 노드**에도 **같은 physnet 매핑**과 **게이트웨이 섀시 옵션**이 있어야 L2가 이어짐
 	```
 	ovs-vsctl set Open_vSwitch . external_ids:ovn-bridge-mappings=phynet2:br-ex
@@ -28,7 +26,7 @@
 
 	- br-ex에 localnet 포트가 생겼는지 확인 (게이트웨이 노드)
 	  `ovs-vsctl list-ports br-ex`
-	  ![[Pasted image 20251005003629.png|500]]
+	  ![[Pasted image 20251111232718.png|500]]
 	  `provnet-<uuid>` 같은 OVN이 만든 포트가 보임
 	  -> 안 보이면 OVN이 provider 네트워크를 외부 브릿지로 연결하지 못한 상태임
 
@@ -39,14 +37,8 @@
   openstack router set --external-gateway public-network <router-name>
   ```
 
-> 192.168.50.189까지 ping이 안되는 상황
-5. OVN 브리지 매핑 : 컨트롤러/네트워크 노드
-  ![[Pasted image 20251005010329.png|250]]
-	이 과정에서 [[neutron service down (ovn central not listned)]] 문제 발생하여 해결함
-	-> 라우터 게이트웨이 상태가 Active로 바뀜
-	하지만 여전히 게이트웨이와 통신이 안됨
-	-> OpenFlow 버전 불일치 문제였고, geneve 터널망 열어주니 게이트웨이까지 통신됨 
-		참고 : [[라우터 게이트웨이까지 통신 불가 (feat. geneve)]]
+5. 인스턴스 생성
+   ![[Pasted image 20251111233224.png|500]]
 
 6. Floating IP 생성 및 연결
 	```
@@ -54,8 +46,20 @@
 	openstack server add floating ip <INSTANCE_NAME> <FLOATING_IP>
 	```
 
----
-- 외부 → FIP(192.168.50.177)
-- 외부 → 192.168.50.185(test02, provider 네트워크)
-안 되는 문제 해결중
+**결과**
+네트워크 토폴로지 :
+![[Pasted image 20251111233354.png|400]]
 
+할당한 floating ip로 통신 성공
+![[Pasted image 20251111232635.png]]
+
+VM 내부에서도,
+![[Pasted image 20251111234028.png|600]]
+IP 잘 할당되었고
+![[Pasted image 20251111234046.png|500]]
+gw까지 통신이 잘 되는 것을 볼 수 있음
+
+
+---
+`2025-09-17 ~ 2025-11-11`
+장장 2개월의 오픈스택 구축 대장정 마무리.

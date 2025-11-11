@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Build/OVN Settings.md",
+                "file": "Build/self-service 네트워크 구축하기.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "OVN Settings"
+              "title": "self-service 네트워크 구축하기"
             }
           }
         ]
@@ -92,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 451.5
+    "width": 331.5
   },
   "right": {
     "id": "d0dc0d1755fbed3b",
@@ -185,26 +185,33 @@
   },
   "active": "d6b7ce5e0e29a996",
   "lastOpenFiles": [
-    "Build/TroubleShooting/통신 문제/(해결중) public network vm 통신 불가 2 (overlay NIC IP).md",
+    "Build/TroubleShooting/통신 문제/(해결중) Tenant 망까지 통신 불가.md",
+    "Build/self-service 네트워크 구축하기.md",
+    "Build/TroubleShooting/통신 문제/(해결중) selfservice network의 VM 통신 불가.md",
+    "Attached files/Pasted image 20251111234046.png",
+    "Attached files/Pasted image 20251111234028.png",
+    "Attached files/Pasted image 20251111233354.png",
+    "Attached files/Pasted image 20251111233224.png",
+    "Attached files/Pasted image 20251111233015.png",
+    "Attached files/Pasted image 20251005000805.png",
+    "Attached files/Pasted image 20251111232924.png",
+    "Attached files/Pasted image 20251111232718.png",
+    "Attached files/Pasted image 20251111232635.png",
+    "Build/2. 설치 과정.md",
+    "Build/TroubleShooting/통신 문제/Geneve 터널망 생성 안돼서 라우터 게이트웨이까지 통신 불가 (OpenFlow Version negotiation failed).md",
+    "Build/public-network 재생성 명령어.md",
+    "Build/0. 원격 서버 접속 과정 (wireguard).md",
+    "Build/TroubleShooting/통신 문제/public network의 VM 통신 불가 2 (compute 노드는 localnet 포트 존재 X. 따라서, selfservice 망에서만 VM 생성!).md",
+    "Build/TroubleShooting/통신 문제/(해결중) public network의 VM 통신 불가 문제 2.md",
+    "Build/TroubleShooting/통신 문제/public network의 VM 통신 불가 문제 (compute노드 br-ex 연결).md",
+    "개념/provnet-uuid port.md",
+    "Attached files/Pasted image 20251111170700.png",
     "Build/OVN Settings.md",
     "Build/NIC 분리.md",
     "!Pasted image 20251110233429.png.md",
-    "Attached files/Pasted image 20251110233429.png",
-    "Attached files/Pasted image 20251110231855.png",
-    "Attached files/Pasted image 20251111001527.png",
-    "Build/TroubleShooting/통신 문제/(해결중) public network의 VM 통신 불가 문제 2.md",
     "Build/TroubleShooting/통신 문제/Geneve 통신 문제 2.md",
-    "Build/TroubleShooting/통신 문제/Geneve 터널망 생성 안돼서 라우터 게이트웨이까지 통신 불가 (OpenFlow Version negotiation failed).md",
     "Services/Cinder.md",
-    "Build/2. 설치 과정.md",
     "Build/1-2. 노드별 서비스 구조.md",
-    "Attached files/Pasted image 20251110225241.png",
-    "Attached files/Pasted image 20251110224818.png",
-    "Attached files/Pasted image 20251102180346.png",
-    "Attached files/Pasted image 20251102181822.png",
-    "Build/TroubleShooting/통신 문제/public network의 VM 통신 불가 문제 (compute노드 br-ex 연결).md",
-    "Attached files/Pasted image 20251110221638.png",
-    "개념/provnet-uuid port.md",
     "Build/TroubleShooting/Failed to create openstack instance (flat type).md",
     "Build/TroubleShooting/instance booting failed.md",
     "Build/TroubleShooting/ssh connection failed.md",
@@ -213,14 +220,6 @@
     "Build/TroubleShooting/OOM killer로 인한 neutron-server shutdown 문제 (feat. ML2 동작 원리).md",
     "Build/TroubleShooting/neutron service down (ovn central not listned).md",
     "Build/TroubleShooting/localnet 포트 세팅 후 서버 전체 통신 끊김 현상 (OVS 재프로비저닝).md",
-    "Attached files/Pasted image 20251110215932.png",
-    "Build/TroubleShooting/통신 문제/(해결중) Tenant 망까지 통신 불가.md",
-    "Attached files/Pasted image 20251102175238.png",
-    "Build/(작성중) self-service 네트워크 구축하기.md",
-    "Build/1-1. 환경 구성.md",
-    "Build/0. 원격 서버 접속 과정 (wireguard).md",
-    "Build/3. 트래픽 흐름.md",
-    "Build/1-3. 브리지 구조.md",
     "무제.base",
     "Build/Troubleshooting/통신 문제",
     "Build/Troubleshooting",

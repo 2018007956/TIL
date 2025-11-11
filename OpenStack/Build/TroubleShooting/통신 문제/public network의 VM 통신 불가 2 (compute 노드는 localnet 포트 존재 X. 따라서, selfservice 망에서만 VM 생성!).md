@@ -70,4 +70,36 @@ Nova-compute는 인스턴스를 만들 때 **반드시 네트워크 포트를 Hy
 이 단계에서 실패하면 VM 생성은 즉시 중단됨
 
 
+여러번 테스트 해보니, 볼륨 생성/로컬 생성 상관없이 
+selfservice net에는 생성되는데 인스턴스 하나까지만 생성됨 (-> 용량 문제일 것으로 추측)
+![[Pasted image 20251111165603.png]]
+근데 public-network에 생성하면 하나도 생성이 안됨
+
+selfservice망과 public-network망은 서로 포트 바인딩 방식이 다름
+
+|네트워크|VM이 실행되는 노드|포트 바인딩 방식|
+|---|---|---|
+|**SelfService (Overlay)**|✅ Compute|geneve 포트 필요, br-int 포트 생성|
+|**Public (Provider)**|✅ Compute|localnet 포트 필요, br-ex 매핑 필요|
+
+=> 지금은 Public Network에서 Compute 노드가 localnet 포트 바인딩을 못하는 상황
+**Public-network은 Provider Network(Localnet)라서 ‘Compute 노드의 br-ex 포트 바인딩’이 필수**
+
+Compute 노드에서, br-ex가 실제로 OVN localnet 포트를 가지고 있는지 확인해보면,
+![[Pasted image 20251111170700.png]]
+
+**==원인)❗ Missing: localnet 포트가 없음==**
+Provider(public-network)를 위해 필요한 OVN localnet 포트가 보여야 하는데  
+지금 br-ex에는 물리 NIC / br-ex 내부포트만 있다.
+
+>일반적인 구성에서는 Compute 노드에 `localnet` 포트가 없음. 
+인스턴스 NIC는 `br-int` (논리 스위치)에 붙고, provider 쪽 실제 외부 브리지(`br-ex`)와의 물리 연결은 **게이트웨이 섀시(보통 네트워크 노드)** 가 담당한다. 그래서 **Compute에 `provnet-*`(localnet) 포트가 없음**
+
+But, **인스턴스를 provider 네트워크에 “직접” 붙이고 싶다면**, 그 인스턴스가 올라가는 **Compute에도 해당 physnet 매핑(예: `phynet2:br-ex`)이 있어야** 한다. 그렇게 설정하면 그 Compute에도 **`provnet-*` localnet 포트가 생길 수** 있고, provider 포트 바인딩이 성공한다.
+
+- **Self-Service만 쓸 때:** Compute에 localnet 불필요(없어도 정상).
+- **Provider 직결 인스턴스가 필요할 때:** 인스턴스가 배치될 **모든 Compute**에 동일한 **`ovn-bridge-mappings`** 을 구성해야 함.
+
+==-> public-network에는 VM 생성하지 않고, selfservice 망에만 생성하기로 결정!!==
+
 
