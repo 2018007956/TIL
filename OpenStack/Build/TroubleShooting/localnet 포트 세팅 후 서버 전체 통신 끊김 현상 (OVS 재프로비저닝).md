@@ -133,4 +133,4 @@ Bridge br-public --> uplink: eth2 (공인망)
 이런 구성이면, `localnet`이 연결된 `physnet2`가 `br-public`을 타고 외부로 나가니까,  
 관리용 NIC(`eth0`)과 완전히 분리돼 있어서 끊길 일이 없다.
 
-[[NIC 분리]]에서 자세히 알아봄
+[[2-3. Provider 물리망과 Overlay 터널망의 NIC 분리]]에서 자세히 알아봄
